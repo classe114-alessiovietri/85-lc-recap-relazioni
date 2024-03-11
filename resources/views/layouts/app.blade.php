@@ -29,6 +29,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.artists.index') }}">Artisti</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.genres.index') }}">Generi</a>
+                            </li>
                         </ul>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

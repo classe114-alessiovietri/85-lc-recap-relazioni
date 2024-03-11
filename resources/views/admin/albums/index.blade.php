@@ -26,6 +26,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">Artista</th>
+                                <th scope="col">Generi</th>
                                 <th scope="col">Pubblicato</th>
                                 <th scope="col">Creato il</th>
                                 <th scope="col">alle</th>
@@ -49,6 +50,13 @@
                                             @else
                                                 -
                                             @endif
+                                        </td>
+                                        <td>
+                                            @foreach ($album->genres as $genre)
+                                                <span class="badge rounded-pill text-bg-primary">
+                                                    {{ $genre->name }}
+                                                </span>
+                                            @endforeach
                                         </td>
                                         <td @class([
                                             'fw-bold',

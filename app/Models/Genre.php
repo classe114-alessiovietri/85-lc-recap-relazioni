@@ -5,20 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Album extends Model
+class Genre extends Model
 {
     use HasFactory;
 
     /*
         Relationships
     */
-    public function artist()
+    public function albums()
     {
-        return $this->belongsTo(Artist::class);
-    }
-
-    public function genres()
-    {
-        return $this->belongsToMany(Genre::class);
+        return $this->belongsToMany(Album::class);
     }
 }
